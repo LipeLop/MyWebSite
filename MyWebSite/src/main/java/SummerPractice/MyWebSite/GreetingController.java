@@ -12,9 +12,9 @@ public class GreetingController {
     public String greeting(Model model) {
         return "greeting";
     }
-    @GetMapping("/next")
-    public String nextPage(Model model) {
-        return "next";
+    @GetMapping("/milk")
+    public String milkPage(Model model) {
+        return "milk";
     }
 
 }
