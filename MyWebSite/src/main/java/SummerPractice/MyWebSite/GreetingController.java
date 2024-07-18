@@ -90,5 +90,16 @@ public class GreetingController {
         model.addAttribute("slides", slides);
         return "usualPage";
     }
+    @GetMapping("/yogurt")
+    public String yogurtPage(Model model) {
+
+        model.addAttribute("title", "Наш Йогурт");
+        model.addAttribute("subtitleText", "Полезный йогурт восстановит баланс вашей микрофлоры. Очень много белка. Попробуйте!");
+        List<String> slides = new ArrayList<>();
+        slides.add("images/yogurtPage/yogurt1.png");
+        slides.add("images/yogurtPage/yogurt2.png");
+        model.addAttribute("slides", slides);
+        return "usualPage";
+    }
 
 }
