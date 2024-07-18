@@ -44,5 +44,19 @@ public class GreetingController {
         model.addAttribute("slides", slides);
         return "usualPage";
     }
+    @GetMapping("/cottage_cheese")
+    public String cottage_cheesePage(Model model) {
+
+        model.addAttribute("title", "Наш Творог");
+        model.addAttribute("subtitleText", "Вкус нашего творога очень похож на домашний. Еще больше он раскрывается с нашей сметаной. Попробуйте!");
+        List<String> slides = new ArrayList<>();
+        slides.add("images/cottage_cheesePage/cottage_cheese1.png");
+        slides.add("images/cottage_cheesePage/cottage_cheese2.png");
+        slides.add("images/cottage_cheesePage/cottage_cheese3.png");
+        slides.add("images/cottage_cheesePage/cottage_cheese4.png");
+        model.addAttribute("slides", slides);
+        return "usualPage";
+    }
+
 
 }
