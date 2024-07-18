@@ -80,5 +80,15 @@ public class GreetingController {
         model.addAttribute("slides", slides);
         return "usualPage";
     }
+    @GetMapping("/kefir")
+    public String kefirPage(Model model) {
+
+        model.addAttribute("title", "Наш Кефир");
+        model.addAttribute("subtitleText", "Кефир с наших ферм очень полезный. Он следит за здоровьем пищеварения. Попробуйте!");
+        List<String> slides = new ArrayList<>();
+        slides.add("images/kefirPage/kefir1.png");
+        model.addAttribute("slides", slides);
+        return "usualPage";
+    }
 
 }
