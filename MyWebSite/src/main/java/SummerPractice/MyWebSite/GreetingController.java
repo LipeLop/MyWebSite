@@ -69,5 +69,16 @@ public class GreetingController {
         model.addAttribute("slides", slides);
         return "usualPage";
     }
+    @GetMapping("/sour_cream")
+    public String sour_creamPage(Model model) {
+
+        model.addAttribute("title", "Наша Сметана");
+        model.addAttribute("subtitleText", "Сметанка, от которой просто тякут слюнки. С творогом особенно вкусно. Попробуйте!");
+        List<String> slides = new ArrayList<>();
+        slides.add("images/sour_creamPage/sour_cream1.png");
+        slides.add("images/sour_creamPage/sour_cream2.png");
+        model.addAttribute("slides", slides);
+        return "usualPage";
+    }
 
 }
