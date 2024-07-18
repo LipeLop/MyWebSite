@@ -57,6 +57,17 @@ public class GreetingController {
         model.addAttribute("slides", slides);
         return "usualPage";
     }
+    @GetMapping("/cream")
+    public String creamPage(Model model) {
 
+        model.addAttribute("title", "Наши Сливки");
+        model.addAttribute("subtitleText", "Такие нежные сливки, что таят на языке. Идеальны для готовки. Попробуйте!");
+        List<String> slides = new ArrayList<>();
+        slides.add("images/creamPage/cream1.png");
+        slides.add("images/creamPage/cream2.png");
+        slides.add("images/creamPage/cream3.png");
+        model.addAttribute("slides", slides);
+        return "usualPage";
+    }
 
 }
