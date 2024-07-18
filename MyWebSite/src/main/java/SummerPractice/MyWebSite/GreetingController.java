@@ -15,13 +15,6 @@ import java.util.List;
 
 @Controller
 public class GreetingController {
-    private final MessageSource messageSource;
-
-    @Autowired
-    public GreetingController(MessageSource messageSource) {
-        this.messageSource = messageSource;
-    }
-
 
     @GetMapping("/")
     public String greeting(Model model) {
@@ -37,6 +30,17 @@ public class GreetingController {
         slides.add("images/milkPage/milk1.png");
         slides.add("images/milkPage/milk2test.png");
         slides.add("images/milkPage/milk3test.png");
+        model.addAttribute("slides", slides);
+        return "usualPage";
+    }
+    @GetMapping("/butter")
+    public String butterPage(Model model) {
+
+        model.addAttribute("title", "Наше Сливочное Масло");
+        model.addAttribute("subtitleText", "Именно наше сливочное масло запомнится вам своим натуральным свежим вкусом. Идеальная структура и отличное качество. Попробуйте!");
+        List<String> slides = new ArrayList<>();
+        slides.add("images/butterPage/butter1.png");
+        slides.add("images/butterPage/butter2.png");
         model.addAttribute("slides", slides);
         return "usualPage";
     }
