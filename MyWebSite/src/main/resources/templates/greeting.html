@@ -1,10 +1,195 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Milk Boy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<p th:text="|Hello, ${name}!|" />
+<div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a href="" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
+                 viewBox="0 0 24 24">
+            </svg>
+            <strong>Milk Boy Company</strong>
+        </a>
+    </div>
+</div>
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Milk Boy Company</h1>
+            <p class="lead text-body-secondary">Уже на протяжении 4 лет мы радуем вас нашей натуральной молочной
+                продукцией. Каждый день мы стараемся делать больше и лучше. Мы надеемся, что вам все понравится!</p>
+        </div>
+    </div>
+</section>
+<div class="album py-5 bg-body-tertiary">
+
+    <!---!> Молоко <--->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                         preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="#636363"></rect>
+                        <image height="225" width="100%" href="images/mainPage/milk.png"></image>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">Молоко</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <form action="/milk" method="get">
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Подробнее</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!---!> Масло <--->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#636363"></rect>
+                        <image height="225" width="100%" href="images/mainPage/butter.png"></image>
+
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">Масло</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <form action="/butter" method="get">
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Подробнее</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!---!> Творог <--->
+
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#636363"></rect>
+                        <image height="225" width="100%" href="images/mainPage/cottage_cheese.png"></image>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">Творог</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <form action="/cottage_cheese" method="get">
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Подробнее</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!---!> Сливки <--->
+
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#636363"></rect>
+                        <image height="225" width="100%" href="images/mainPage/cream.png"></image>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">Сливки</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <form action="/cream" method="get">
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Подробнее</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---!> Сметана sour_cream <--->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#636363"></rect>
+                        <image height="225" width="100%" href="images/mainPage/sour_cream.png"></image>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">Сметана</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <form action="/sour_cream" method="get">
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Подробнее</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---!> Кефир <--->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#636363"></rect>
+                        <image height="225" width="100%" href="images/mainPage/kefir.png"></image>
+
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">Кефир</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <form action="/kefir" method="get">
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Подробнее</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!---!> Йогурт <--->
+
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#636363"></rect>
+                        <image height="225" width="100%" href="images/mainPage/yogurt.png"></image>
+
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">Йогурт</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <form action="/yogurt" method="get">
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Подробнее</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
