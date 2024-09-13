@@ -21,6 +21,11 @@ public class GreetingController {
         return "greeting";
     }
 
+    @GetMapping("/about")
+    public String about(Model model) {
+        return "about";
+    }
+
     @GetMapping("/milk")
     public String milkPage(Model model) {
 
